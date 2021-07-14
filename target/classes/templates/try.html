@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Equipments</title>
+    <link rel="stylesheet" type="text/css" href=/css/new.css>
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+          crossorigin="anonymous">
+</head>
+<div>
+<div class="content">
+    <h2>Add Equipments</h2>
+    <div th:if="${param.success}">
+        <div class="alert alert-info">Issue added successfully in the table at the bottom</div>
+    </div>
+    <div>
+        <form th:action="@{/process_equipments}" method ="post" th:object="${equipments}">
+
+            <label for="equipName"><b>Name</b></label>
+            <input type="text" placeholder="Enter Equipment Here"
+                   name="email" required maxlength="45" th:field="*{name}">
+
+            <label for="equipDescr"><b>Description</b></label>
+            <input type="text" placeholder="Enter Equipment Description Here"
+                   name="equipDescr" required maxlength="250" th:field="*{description}">
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <p><h2>Available Equipments</h2></p>
+
+    <table id="customers">
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+
+        <tr th:each="equipments: ${listEquipments}">
+            <td th:text="${equipments.id}">Equipments Name</td>
+            <td th:text="${equipments.name}">Equipments Name</td>
+            <td th:text="${equipments.description}">Equipments Description</td>
+
+        </tr>
+    </table>
+</div>
+</div>
+</body>
+</html>
+

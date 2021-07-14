@@ -1,0 +1,7 @@
+{
+  "timestamp": "2021-07-09T03:24:15.191+00:00",
+  "status": 500,
+  "error": "Internal Server Error",
+  "message": "query did not return a unique result: 2; nested exception is javax.persistence.NonUniqueResultException: query did not return a unique result: 2",
+  "path": "/api/v1/student"
+}

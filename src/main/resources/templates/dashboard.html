@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:float="http://www.w3.org/1999/xhtml"
+      xmlns:text-align="http://www.w3.org/1999/xhtml" xmlns:padding="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Equipments</title>
+    <link rel="stylesheet" type="text/css" href=/css/newstyle.css>
+</head>
+<body>
+<div class="topnav">
+    <a > <img src="zesco.png" alt="Paris" width="50" height="50"></a>
+    <a href="#"> Home</a>
+    <a th:href="@{/issues}">Issues</a>
+    <a th:href="@{/equipments}">Equipments</a>
+    <a th:href="@{/about}">About Us</a>
+    <a th:href="@{/logout}">Logout</a>
+    <a >     </a>
+    <a >     </a>
+    <a >     </a>
+    <a >     </a>
+    <a >     </a>
+    <a >     </a>
+    <a >     </a>
+    <a >     </a>
+    <a >     </a>
+    <a >     </a>
+    <a >     </a>
+    <a >     </a>
+    <a >     </a>
+    <p id="username">Welcome <b id="name">[[${#request.userPrincipal.principal.fullName}]] </b></p>
+</div>
+
+    <div class="content">
+        <img src="try.jpg" alt="Paris" width="100%" height="300%">
+
+</div>
+
+</body>
+</html>

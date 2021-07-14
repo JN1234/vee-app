@@ -1,0 +1,14 @@
+com\ZescoIssueTrackingAppApplication.class
+com\CustomUserDetails.class
+com\UserService.class
+com\dbrepository\SQLDialect.class
+com\AppController.class
+com\CustomUserDetailsService.class
+com\PasswordEncoder.class
+com\IssuesRepository.class
+com\UserRepository.class
+com\Equipments.class
+com\EquipmentsRepository.class
+com\User.class
+com\Issues.class
+com\WebSecurityConfig.class

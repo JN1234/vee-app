@@ -1,0 +1,356 @@
+@charset "ISO-8859-1";
+
+* {box-sizing: border-box}
+#welcome{
+	
+	text-align:center;
+	font-family: arial;
+	height: 15%;
+  width: 100%;
+  position: fixed ;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 10px;
+	background-color: dimgrey;
+	
+	
+}
+#register{
+	
+	font-family: arial;
+	background-color: dimgray;
+	
+	
+}
+#text_reg{
+	text-align: center;
+	color: white;
+}
+#regForm{
+	
+
+	color: black;
+	z-index: 3;
+	font-size:20px;
+	padding-top: 10%;
+  
+ 
+}
+#regSuccess{
+	  height: 15%;
+  width: 100%;
+  position: fixed ;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: dimgrey;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+}
+#text{
+	color: white;
+}
+#top{
+	text-align: center;
+	color: black;
+	z-index: 3;
+	font-size:20px;
+	padding-top: 10%;
+}
+
+
+#logoutButton{
+	width: 10%
+}
+
+
+body {
+  font-family: "arial", monospace;
+  background: dimgray;
+}
+
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: lightgrey;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #000000;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+#main {
+  transition: margin-left .5s;
+  padding: 16px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+
+.container{
+	  height: 12%;
+  width: 100%;
+  position: fixed ;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: dimgray;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 10px;
+}
+
+#username{
+	  
+  position: fixed;
+  z-index: 1;
+  left: 65%;
+  font-size: 30px;
+  top: -2%;
+  overflow-x: hidden;
+  padding-top: 0px;
+   
+
+}
+#name{
+	color: white;
+	font-style: italic;
+}
+
+#addEquip{
+	position: fixed;
+  z-index: 1;
+  left: 40%;
+  font-size: 30px;
+  top: 10%;
+  padding-top: 0px;
+}
+#form-issues{
+	z-index: 3;
+	top: 20%;
+	left: 30%;
+        padding-top: 5%;
+}
+
+#form{
+	z-index: 2;
+	top: 20%;
+	position: fixed;
+	left: 30%;
+}
+
+/* Full-width input fields */
+  input[type=text], input[type=text] {
+  width: 100%;
+  height: 50%;
+  padding: 5px;
+  margin: 5px 0 5px 0;
+  display: compact;
+  border: none;
+  background: #f1f1f1;
+}
+ input[type=email], input[type=password] {
+  width: 100%;
+  height: 50%;
+  padding: 5px;
+  margin: 5px 0 5px 0;
+  display: compact;
+  border: none;
+  background: #f1f1f1;
+}
+
+
+hr {
+  border: 5px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 0px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 14px 20px;
+  background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+
+
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+#availableEquip{
+	z-index: 2;
+	top: 62%;
+	position: fixed;
+	left: 40%;
+}
+#availEquip{
+	z-index: 2;
+	top: 70%;
+	position: fixed;
+	left: 30%;
+	
+}
+
+#studentDetails{
+	z-index: 2;
+	top: 30%;
+	position: fixed;
+	left: 40%;
+	
+}
+#aboutDev{
+	z-index: 2;
+	top: 20%;
+	position: fixed;
+	left: 40%;
+}
+
+#logo{
+		z-index: 2;
+	top: 20%;
+	position: fixed;
+	left: 40%;
+}
+
+#welcomeText{
+	z-index: 2;
+	top: 55%;
+	position: fixed;
+	left: 30%;
+	background-color: #ede7f6;
+  padding: 25px;
+  color: #5870cb;
+   border: 5px solid #5870cb;
+   text-align: center;
+}
+
+table{
+	overflow-y:scroll;
+   height:160px;
+   display:inline-block;
+   width: 500px;
+   font-family: tahoma, sans-serif;
+  border-collapse: collapse;
+}
+td, th {
+  border: 1px solid #000000;
+  text-align: left;
+  padding: 8px;
+  size: 100px;
+}
+th{
+	background: #dddddd;
+}
+
+@media only screen and (max-width:1024px) {
+	
+	#welcome{
+	
+	text-align:center;
+	font-family: tahoma;
+	height: 5%;
+  width: 100%;
+  position: fixed ;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  transition: 1s;
+  padding-top: 10px;
+	
+	
+}
+
+#top{
+	text-align: center;
+	color: black;
+	z-index: 3;
+	font-size:20px;
+	padding-top: 10%;
+	top: 75%;
+}
+ /*try starts here*/
+    #customers {
+        font-family: Arial, Helvetica, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    #customers td, #customers th {
+        border: 1px solid #ddd;
+        padding: 8px;
+    }
+
+    #customers tr:nth-child(even){background-color: #f2f2f2;}
+
+    #customers tr:hover {background-color: #ddd;}
+
+    #customers th {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: left;
+        background-color: #04AA6D;
+        color: white;
+    }
+
+}
+
+
+
+

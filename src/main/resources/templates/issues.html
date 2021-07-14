@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>issues</title>
+	<link rel="stylesheet" type="text/css" href=/css/newstyle.css>
+	<link rel="stylesheet"
+		  href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+		  integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+		  crossorigin="anonymous">
+</head>
+<body>
+<div class="topnav">
+	<a > <img src="zesco.png" alt="Paris" width="50" height="50"></a>
+	<a th:href="@{/open_dashboard}">Home</a>
+	<a href="#">Issues</a>
+	<a th:href="@{/equipments}">Equipments</a>
+	<a th:href="@{/about}">About Us</a>
+	<a th:href="@{/logout}">Logout</a>
+	<a >     </a>
+	<a >     </a>
+	<a >     </a>
+	<a >     </a>
+	<a >     </a>
+	<a >     </a>
+	<a >     </a>
+	<a >     </a>
+	<a >     </a>
+	<a >     </a>
+	<a >     </a>
+	<a >     </a>
+	<a >     </a>
+	<a >     </a>
+	<p id="username">Welcome <b id="name">[[${#request.userPrincipal.principal.fullName}]] </b></p>
+</div>
+
+<div class="content">
+	<h2>Add Issues</h2>
+	<div th:if="${param.success}">
+		<div class="alert alert-info">Issue added successfully in the table at the bottom</div>
+	</div>
+		<div>
+		<form th:action="@{/process_issues}" method ="post"  th:object="${issues}">
+
+		<label for="equipment">Equipment:</label>
+			<input list="availableEquipments" placeholder="Click here to see available equipment" style="width:285px " th:field="*{equipment}">
+			<datalist id="availableEquipments">
+				<option th:each="users : ${listEquipments}"
+						th:value="${users.name}"
+						th:text="${users.id}"/>
+			</datalist>
+			</input>
+              <br>
+			<label for="issueDescr"><b>Description</b></label>
+			<input type="text" placeholder="Enter Issues Description Here"
+				   name="issueDescr" th:field ="*{description}" required maxlength="250">
+			<br>
+			<label for="location"><b>Location</b></label>
+			<input type="text" placeholder="Enter Location Here"
+				   name="locationName" th:field ="*{location}" required maxlength="45" >
+			<br>
+			<label for="equipState">State of equipment</label>
+			<select  th:field ="*{equipState}">
+				<option th:value="Good">Good</option>
+				<option th:value="Bad">Bad</option>
+			</select>
+			<br>
+			<label for="inspector">Name of inspector</label>
+			<select  th:field ="*{inspector}">
+				<option th:value="${#request.userPrincipal.principal.fullName}"> <p p="currentUser">[[${#request.userPrincipal.principal.fullName}]] </p></option>
+			</select>
+			<br>
+
+			<input type="submit" value="Submit">
+		</form>
+	</div>
+
+	<p><h2>Available Issues</h2></p>
+
+	<table id="customers">
+		<tr>
+			<th>No</th>
+			<th>Name</th>
+			<th>Description</th>
+			<th>State</th>
+			<th>Location</th>
+			<th>Inspector</th>
+			<th>Supervisor</th>
+			<th>Supervisor comment</th>
+		</tr>
+		<tr th:each="issues: ${listIssues}">
+			<td th:text="${issues.id}">Equipments No</td>
+			<td th:text="${issues.equipment}">Equipments Name</td>
+			<td th:text="${issues.description}">Equipments Description</td>
+			<td th:text="${issues.equipState}">Equipments state</td>
+			<td th:text="${issues.location}">Equipments Location</td>
+			<td th:text="${issues.inspector}">name of inspector</td>
+			<td th:text="${issues.supervisor}">name of supervisor</td>
+			<td th:text="${issues.superFeedback}">supervisor</td>
+
+		</tr>
+	</table>
+</div>
+</div>
+</body>
+</html>
